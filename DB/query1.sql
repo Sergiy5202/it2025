@@ -1,4 +1,7 @@
 -- Active: 1702282272087@@127.0.0.1@5432@it2025practice13
+
+CREATE DATABASE PZ_1_3;
+
 -- Створення таблиці
 CREATE TABLE personal (
     id SERIAL PRIMARY KEY,
