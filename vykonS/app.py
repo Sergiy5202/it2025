@@ -6,7 +6,7 @@ app.secret_key = '111'  # Для повідомлень Flash
 
 # Конфігурація бази даних
 DB_CONFIG = {
-    'dbname': 'it2025practice13',
+    'dbname': 'militarytrainingdb',
     'user': 'postgres',
     'password': 'admin',
     'host': 'localhost',
@@ -22,7 +22,7 @@ def get_db_connection():
 def index():
     conn = get_db_connection()
     cur = conn.cursor()
-    cur.execute("SELECT id, name, surname, rank, position FROM personal order by id")
+    cur.execute("SELECT ProgramID, Title, Duration, Participants,CompletionDate FROM trainingprograms order by id")
     records = cur.fetchall()
     cur.close()
     conn.close()
