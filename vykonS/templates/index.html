@@ -1,50 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Records</title>
+    <title>Програми тренувань</title>
 </head>
 <body>
-    <h1>Personal Records</h1>
-    <a href="{{ url_for('create') }}">Create New Record</a>
+    <h1>Програми тренувань</h1>
+    
+    <!-- Повідомлення Flash -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    
+    <!-- Кнопка для створення нової програми -->
+    <a href="{{ url_for('create') }}">Створити нову програму</a>
+    
+    <!-- Таблиця з програмами тренувань -->
     <table border="1">
         <thead>
             <tr>
-                <th>ID програми</th>
-                <th>Назва програми</th>
+                <th>Назва</th>
                 <th>Тривалість</th>
                 <th>Учасники</th>
-                <th>Дата закінчення</th>
-                <th>Actions</th>
+                <th>Дата завершення</th>
+                <th>Дії</th>
             </tr>
         </thead>
         <tbody>
             {% for record in records %}
             <tr>
-                <td>{{ record[0] }}</td>
-                <td>{{ record[1] }}</td>
-                <td>{{ record[2] }}</td>
-                <td>{{ record[3] }}</td>
-                <td>{{ record[4] }}</td>
+                <td>{{ record[1] }}</td> <!-- Title -->
+                <td>{{ record[2] }}</td> <!-- Duration -->
+                <td>{{ record[3] }}</td> <!-- Participants -->
+                <td>{{ record[4] }}</td> <!-- CompletionDate -->
                 <td>
-                    <a href="{{ url_for('edit', id=record[0]) }}">Edit</a>
-                    <form action="{{ url_for('delete', id=record[0]) }}" method="POST" style="display:inline;">
-                        <button type="submit">Delete</button>
+                    <a href="{{ url_for('edit', id=record[0]) }}">Редагувати</a> |
+                    <form action="{{ url_for('delete', id=record[0]) }}" method="post" style="display:inline;">
+                        <button type="submit">Видалити</button>
                     </form>
                 </td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
-    {% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages %}
-    <ul>
-        {% for category, message in messages %}
-        <li style="color: {{ 'red' if category == 'error' else 'green' }};">{{ message }}</li>
-        {% endfor %}
-    </ul>
-    {% endif %}
-    {% endwith %}
 </body>
 </html>

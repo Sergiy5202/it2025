@@ -17,3 +17,46 @@
     <a href="{{ url_for('index') }}">Back to Home</a>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редагувати програму</title>
+</head>
+<body>
+    <h1>Редагувати програму тренування</h1>
+    
+    <!-- Повідомлення Flash -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    
+    <!-- Форма для редагування програми -->
+    <form action="{{ url_for('edit', id=record[0]) }}" method="POST">
+        <label for="title">Назва програми:</label><br>
+        <input type="text" id="title" name="title" value="{{ record[1] }}" required><br><br>
+        
+        <label for="duration">Тривалість (дні):</label><br>
+        <input type="number" id="duration" name="duration" value="{{ record[2] }}" required><br><br>
+        
+        <label for="participants">Учасники:</label><br>
+        <input type="text" id="participants" name="participants" value="{{ record[3] }}" required><br><br>
+        
+        <label for="completion_date">Дата завершення:</label><br>
+        <input type="date" id="completion_date" name="completion_date" value="{{ record[4] }}" required><br><br>
+        
+        <button type="submit">Оновити</button>
+    </form>
+    
+    <br>
+    <a href="{{ url_for('index') }}">Назад до списку програм</a>
+</body>
+</html>
