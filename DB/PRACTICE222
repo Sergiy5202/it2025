@@ -1,0 +1,18 @@
+SELECT *
+from student;
+
+select * from ranks;
+
+select * from students WHERE rank_id=6;
+
+SELECT extract (MONTH FROM birth_date) as Birth,
+count (*) as count
+from students
+GROUP BY birth
+ORDER BY count DESC;
+
+SELECT to_char (birth_date, 'month') as Birth,
+count (*) as count
+from students
+GROUP BY birth
+ORDER BY count DESC;
