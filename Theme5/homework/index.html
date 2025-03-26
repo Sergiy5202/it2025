@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Порівняння інтерфейсів сайтів</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            color: #3498db;
+            margin: 25px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        h3 {
+            color: #2c3e50;
+            margin: 20px 0 10px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        .site-comparison {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .site-card {
+            flex: 1;
+            min-width: 300px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .site-card h3 {
+            color: #3498db;
+            margin-top: 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .site-image {
+            width: 100%;
+            height: 200px;
+            background-color: #e0e0e0;
+            margin: 15px 0;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-style: italic;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        .rating {
+            display: flex;
+            align-items: center;
+        }
+        
+        .stars {
+            color: #f39c12;
+            margin-right: 5px;
+        }
+        
+        .figma-section {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #ecf0f1;
+            border-radius: 8px;
+        }
+        
+        .figma-image {
+            width: 100%;
+            height: 400px;
+            background-color: #e0e0e0;
+            margin: 15px 0;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-style: italic;
+        }
+        
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            .site-comparison {
+                flex-direction: column;
+            }
+            
+            .site-card {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Порівняння інтерфейсів популярних сайтів</h1>
+            <p>Аналіз UI/UX двох популярних веб-сайтів: Amazon та Apple</p>
+        </header>
+        
+        <section>
+            <h2>Вступ</h2>
+            <p>У цьому аналізі ми порівняємо інтерфейси двох популярних сайтів - Amazon та Apple - з точки зору UI (User Interface) та UX (User Experience). Ми розглянемо такі аспекти як навігація, візуальна ієрархія, кольорова схема, типографіка, адаптивність та загальна зручність використання.</p>
+        </section>
+        
+        <section class="site-comparison">
+            <div class="site-card">
+                <h3>Amazon</h3>
+                <div class="site-image">Зображення сайту Amazon</div>
+                <p>Amazon - один з найбільших інтернет-магазинів у світі, який пропонує мільйони товарів. Інтерфейс Amazon орієнтований на функціональність та ефективність пошуку товарів.</p>
+                
+                <h4>UI аналіз:</h4>
+                <ul>
+                    <li>Щільний інтерфейс з великою кількістю елементів</li>
+                    <li>Переважають синій та білий кольори</li>
+                    <li>Чіткі кнопки з контрастними кольорами</li>
+                    <li>Багато візуальних елементів (банери, іконки, зображення)</li>
+                </ul>
+                
+                <h4>UX аналіз:</h4>
+                <ul>
+                    <li>Інтуїтивний пошук товарів</li>
+                    <li>Детальні фільтри для уточнення результатів</li>
+                    <li>Персоналізовані рекомендації</li>
+                    <li>Швидкий процес оформлення замовлення</li>
+                </ul>
+            </div>
+            
+            <div class="site-card">
+                <h3>Apple</h3>
+                <div class="site-image">Зображення сайту Apple</div>
+                <p>Apple - компанія, яка виробляє електроніку та програмне забезпечення. Сайт Apple відомий своїм мінімалістичним та елегантним дизайном.</p>
+                
+                <h4>UI аналіз:</h4>
+                <ul>
+                    <li>Мінімалістичний дизайн з великою кількістю білого простору</li>
+                    <li>Висока якість зображень продуктів</li>
+                    <li>Обмежена кольорова палітра (переважно білий, сірий, чорний)</li>
+                    <li>Елегантна типографіка з фірмовим шрифтом</li>
+                </ul>
+                
+                <h4>UX аналіз:</h4>
+                <ul>
+                    <li>Проста та зрозуміла навігація</li>
+                    <li>Фокус на візуальному представленні продуктів</li>
+                    <li>Плавні анімації та переходи</li>
+                    <li>Інтуїтивно зрозумілий процес покупки</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Порівняльна таблиця</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Критерій</th>
+                        <th>Amazon</th>
+                        <th>Apple</th>
+                        <th>Коментар</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Навігація</td>
+                        <td>
+                            <div class="rating">
+                                <span class="stars">★★★★☆</span> 4/5
+                            </div>
+                        </td>
+                        <td>
+                            <div class="rating">
+                                <span class="stars">★★★★★</span> 5/5
+                            </div>
+                        </td>
+                        <td>Apple має простішу та інтуїтивно зрозумілу навігацію</td>
+                    </tr>
+                    <tr>
+                        <td>Візуальна ієрархія</td>
+                        <td>
+                            <div class="rating">
+                                <span class="stars">★★★☆☆</span> 3/5
+                            </div>
+                        </td>
+                        <td>
+                            <div class="rating">
+                                <span class="stars">★★★★★</span> 5/5
+                            </div>
+                        </td>
+                        <td>Apple має чіткішу візуальну ієрархію з фокусом на продуктах</td>
+                    </tr>
+                    <tr>
+                        <td>Кольорова схема</td>
+                        <td>
+                            <div class="rating">
+                                <span class="stars">★★★☆☆</span> 3/5
+                            </div>
+                        </td>
+                        <td>
+                            <div class="rating">
+                                <span class="stars">★★★★★</span> 5/5
+                            </div>
+                        </td>
+                        <td>Apple використовує обмежену, але ефективну кольорову палітру</td>
+                    </tr>
+                    <tr>
+                        <td>Адаптивність</td>
+                        <td>
+                            <div class="rating">
+                                <span class="stars">★★★★☆</span> 4/5
+                            </div>
+                        </td>
+                        <td>
+                            <div class="rating">
+                                <span class="stars">★★★★★</span> 5/5
+                            </div>
+                        </td>
+                        <td>Обидва сайти добре адаптовані для мобільних пристроїв</td>
+                    </tr>
+                    <tr>
+                        <td>Швидкість завантаження</td>
+                        <td>
+                            <div class="rating">
+                                <span class="stars">★★★☆☆</span> 3/5
+                            </div>
+                        </td>
+                        <td>
+                            <div class="rating">
+                                <span class="stars">★★★★☆</span> 4/5
+                            </div>
+                        </td>
+                        <td>Amazon має більше елементів, що впливає на швидкість</td>
+                    </tr>
+                    <tr>
+                        <td>Загальне враження</td>
+                        <td>
+                            <div class="rating">
+                                <span class="stars">★★★★☆</span> 4/5
+                            </div>
+                        </td>
+                        <td>
+                            <div class="rating">
+                                <span class="stars">★★★★★</span> 5/5
+                            </div>
+                        </td>
+                        <td>Apple створює більш цілісне та приємне враження</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section>
+            <h2>Висновки</h2>
+            <p>Обидва сайти мають свої сильні сторони, але використовують різні підходи до дизайну інтерфейсу:</p>
+            <ul>
+                <li><strong>Amazon</strong> фокусується на функціональності та ефективності, пропонуючи користувачам швидкий доступ до великої кількості товарів та інформації.</li>
+                <li><strong>Apple</strong> робить акцент на естетиці та емоційному враженні, створюючи елегантний та мінімалістичний інтерфейс, який підкреслює преміальність бренду.</li>
+            </ul>
+            <p>Вибір підходу до дизайну залежить від цілей сайту та потреб цільової аудиторії. Amazon ефективно виконує свою функцію як масштабний інтернет-магазин, тоді як Apple створює преміальний досвід, який відповідає позиціонуванню бренду.</p>
+        </section>
+        
+        <section class="figma-section">
+            <h2>Макет інтерфейсу у Figma</h2>
+            <p>Нижче представлений макет інтерфейсу, створений у Figma, який демонструє основні принципи UI/UX дизайну:</p>
+            <div class="figma-image">Макет інтерфейсу у Figma</div>
+            <p>Цей макет розроблений з урахуванням принципів, які ми розглянули при аналізі сайтів Amazon та Apple:</p>
+            <ul>
+                <li>Чітка візуальна ієрархія</li>
+                <li>Інтуїтивна навігація</li>
+                <li>Збалансована кольорова схема</li>
+                <li>Адаптивний дизайн для різних пристроїв</li>
+                <li>Фокус на зручності користувача</li>
+            </ul>
+        </section>
+        
+        <footer>
+            <p>Домашнє завдання з теми UI/UX | Тема 5 | 2023</p>
+        </footer>
+    </div>
+</body>
+</html>
